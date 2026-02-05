@@ -20,10 +20,11 @@ while ($row = mysqli_fetch_assoc($result)) {
         <td>{$row['email']}</td>
         <td>{$row['age']}</td>
         <td>{$row['gender']}</td>
-        <td>
-            <button onclick=\"editUser({$row['id']},'{$row['name']}','{$row['email']}',{$row['age']},'{$row['gender']}')\">Edit</button>
+        <td class='actions'>
+            <button class='edit' onclick=\"editUser({$row['id']},'{$row['name']}','{$row['email']}',{$row['age']},'{$row['gender']}')\">Edit</button>
             <button onclick=\"deleteUser({$row['id']})\">Delete</button>
         </td>
     </tr>";
 }
 echo "</table>";
+
