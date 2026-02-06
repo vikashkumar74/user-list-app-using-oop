@@ -38,16 +38,10 @@ if ($gender == "") {
     echo "Gender required";
     exit;
 }
-$candidate = new Candidate(
-    $_POST['name'],
-    $_POST['email'],
-    $_POST['age'],
-    $_POST['gender']
-);
-
 
 $candidate = new Candidate($name,$email,$age,$gender);
 
 $manager->update($_POST['id'], $candidate);
 
 echo "User updated successfully";
+
